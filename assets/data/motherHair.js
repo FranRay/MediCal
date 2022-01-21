@@ -13,11 +13,11 @@ const motherHair = [
     },
     {
         id: 4,
-        title: 'StrawberryBlonde',
+        title: 'Strawberry',
     },
     {
         id: 5,
-        title: 'Blonde',
+        title: 'Blond',
     },
 ];
 

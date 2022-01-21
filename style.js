@@ -24,6 +24,13 @@ export default StyleSheet.create({
       fontSize: 14,
       fontFamily: 'DMSans-Medium',
     },
+
+    backButtonWrap: {
+       marginLeft: 20,
+       marginTop: 30,
+       width: 30,
+       height: 30,
+    },
   
     //modal styles--------------------------------------------------------------------
     centeredView: {
@@ -33,8 +40,8 @@ export default StyleSheet.create({
     },
 
     modalView: {
-      width: 350,
-      height: 440,
+      width: 320,
+      height: 200,
       backgroundColor: colors.primary,
       borderRadius: 25,
       shadowColor: colors.secondary,
@@ -50,9 +57,11 @@ export default StyleSheet.create({
     },
 
     modalButton: {
-      width: 150,
+      width: 250,
+      height: 40,
       borderRadius: 10,
       padding: 10,
+      marginTop: 15,
     },
 
     modalButtonClose: {
@@ -71,25 +80,19 @@ export default StyleSheet.create({
       color: colors.textDark,
       textAlign: "center",
       fontFamily: 'DMSans-Bold',
-      fontSize: 26,
+      fontSize: 15,
     },
 
-    modalLine: {
-      width: 280,
-      borderTopColor: colors.secondary,
-      borderTopWidth: 3,
-      paddingBottom: 20,
-      marginBottom: 15
-    },
-
-    modalText: {
-      paddingBottom: 35,
-      color: colors.textDark,
-      textAlign: "justify",
+    modalTextInput: {
+      width: 250,
+      height: 40,
       fontSize: 14,
       fontFamily: 'DMSans-Medium',
-      marginLeft: 40,
-      marginRight: 40,
+      alignSelf: "center",
+      justifyContent: 'center',
+      paddingLeft: 20,
+      color: colors.textDark,
+      backgroundColor: colors.tertiary,
     },
 
     //home page styles--------------------------------------------------------------------
@@ -159,9 +162,40 @@ export default StyleSheet.create({
         alignSelf: "center",
     },
 
+    //help page styles---------------------------------------------------------------
+    helpTitle: {
+        marginTop: 60,
+        alignSelf: "center",
+        alignContent: 'center',
+    },
+    
+    helpWrapper: {
+        marginTop: 80,
+        width: 340,
+        alignSelf: "center",
+        alignContent: "center",
+    },
+    
+    helpText: {
+        color: colors.textDark,
+        fontSize: 18,
+        fontFamily: 'DMSans-Medium',
+        alignSelf: "center",
+        textAlign: 'justify',
+    },
+
+    helpButton: {
+        width: 250,
+        height: 40,
+        borderRadius: 10,
+        padding: 10,
+        marginTop: 50,
+        alignSelf: 'center'
+    },
+
     //page text styles---------------------------------------------------------------
     pageSubheading: {
-        marginTop: 55,
+        marginTop: 5,
         marginLeft: -10,
         color: colors.textLight,
         fontSize: 16,
@@ -186,72 +220,7 @@ export default StyleSheet.create({
       paddingTop: 20,
       paddingLeft: 20,
     },
-
-    bloodTypeButtonWrapper: {
-        marginTop: 7,
-        marginLeft: 32,
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        width: 45,
-        height: 45,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 3,
-        borderColor: colors.secondary,
-    },
     
-    bloodTypeButtonText: {
-        fontSize: 18,
-        color: colors.textLight,
-        fontFamily: 'DMSans-Medium',
-    },
-
-    bloodTypeTouchableOpacity: {
-      marginTop: 7,
-      marginLeft: 32,
-      borderRadius: 10,
-      backgroundColor: colors.secondary,
-      width: 45,
-      height: 45,
-      alignSelf: "center",
-      alignItems: "center",
-    },
-
-    resultsPercentageWrapper: {
-      alignSelf: 'center',
-      alignContent: 'center',
-      justifyContent: 'center',
-    },
-
-    childTypeListWrapper: {
-      width: 340,
-      height: 80,
-      backgroundColor: colors.primary,
-      alignSelf: "center"
-    },
-
-    childTypeWrapper: {
-        marginTop: 12,
-        marginBottom: 4,
-        marginLeft: 32,
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        width: 45,
-        height: 45,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 3,
-        borderColor: colors.secondary,
-    },
-
-    childTypeText: {
-      fontSize: 18,
-      color: colors.secondary,
-      fontFamily: 'DMSans-Medium',
-  },
-
     calculateButton: {
       marginTop: 30,
       borderRadius: 12,
@@ -281,6 +250,19 @@ export default StyleSheet.create({
       paddingTop: 8,
     },
 
+    resultsListWrapper: {
+      width: 340,
+      height: 80,
+      backgroundColor: colors.primary,
+      alignSelf: "center"
+    },
+
+    resultsPercentageWrapper: {
+      alignSelf: 'center',
+      alignContent: 'center',
+      justifyContent: 'center',
+    },
+
     resultsPercentage: {
       fontSize: 12,
       fontFamily: 'DMSans-Medium',
@@ -288,6 +270,153 @@ export default StyleSheet.create({
       justifyContent: 'center',
       alignSelf: 'center',
       alignContent: 'center',
+    },
+
+    //blood type styles---------------------------------------------------------------
+    bloodTypeButtonWrapper: {
+        marginTop: 7,
+        marginLeft: 32,
+        backgroundColor: colors.secondary,
+        borderRadius: 10,
+        width: 45,
+        height: 45,
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 3,
+        borderColor: colors.secondary,
+    },
+    
+    bloodTypeButtonText: {
+        fontSize: 18,
+        color: colors.textLight,
+        fontFamily: 'DMSans-Medium',
+    },
+
+    childTypeWrapper: {
+        marginTop: 12,
+        marginBottom: 4,
+        marginLeft: 32,
+        backgroundColor: colors.secondary,
+        borderRadius: 10,
+        width: 45,
+        height: 45,
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 3,
+        borderColor: colors.secondary,
+    },
+
+    childTypeText: {
+      fontSize: 18,
+      color: colors.secondary,
+      fontFamily: 'DMSans-Medium',
+  },
+
+    //eye color styles---------------------------------------------------------------
+    eyeButtonWrapper: {
+        marginTop: 7,
+        marginLeft: 51,
+        backgroundColor: colors.secondary,
+        borderRadius: 10,
+        width: 45,
+        height: 45,
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 3,
+        borderColor: colors.secondary,
+    },
+
+    eyeButtonText: {
+        fontSize: 12,
+        color: colors.textLight,
+        fontFamily: 'DMSans-Medium',
+    },
+
+    childEyeWrapper: {
+        marginTop: 12,
+        marginBottom: 4,
+        marginLeft: 50,
+        backgroundColor: colors.secondary,
+        borderRadius: 10,
+        width: 45,
+        height: 45,
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 3,
+        borderColor: colors.secondary,
+    },
+
+    childEyeText: {
+      fontSize: 12,
+      marginLeft: -1,
+      color: colors.secondary,
+      fontFamily: 'DMSans-Medium',
+    },
+
+    eyePercentage: {
+        fontSize: 12,
+        fontFamily: 'DMSans-Medium',
+        marginLeft: 51,
+        justifyContent: 'center',
+        alignSelf: 'center',
+        alignContent: 'center',
+    },
+
+    //hair color styles---------------------------------------------------------------
+    hairButtonWrapper: {
+        marginTop: 7,
+        marginLeft: 19,
+        backgroundColor: colors.secondary,
+        borderRadius: 10,
+        width: 45,
+        height: 45,
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 3,
+        borderColor: colors.secondary,
+    },
+
+    hairButtonText: {
+        fontSize: 12,
+        color: colors.textLight,
+        fontFamily: 'DMSans-Medium',
+    },
+
+    childHairWrapper: {
+        marginTop: 12,
+        marginBottom: 4,
+        marginLeft: 19,
+        backgroundColor: colors.secondary,
+        borderRadius: 10,
+        width: 45,
+        height: 45,
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 3,
+        borderColor: colors.secondary,
+    },
+
+    childHairText: {
+      fontSize: 12,
+      marginLeft: -1,
+      color: colors.secondary,
+      fontFamily: 'DMSans-Medium',
+      alignSelf: 'center',
+    },
+
+    hairPercentage: {
+        fontSize: 12,
+        fontFamily: 'DMSans-Medium',
+        marginLeft: 19,
+        justifyContent: 'center',
+        alignSelf: 'center',
+        alignContent: 'center',
     },
 
 

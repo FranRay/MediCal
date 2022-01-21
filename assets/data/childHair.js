@@ -19,13 +19,13 @@ const childHair = [
     },
     {
         id: 4,
-        title: 'StrawberryBlonde',
+        title: 'Strawberry',
         percentage: '0%',
         selected: false,
     },
     {
         id: 5,
-        title: 'Blonde',
+        title: 'Blond',
         percentage: '0%',
         selected: false,
     },
