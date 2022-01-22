@@ -5,7 +5,7 @@ import styles from "./style";
 import colors from './assets/colors/colors';
 
 //import data files
-import BMI from './src/BMI';
+import BMI from './src/BMI'; //BMI Calculator
 import motherData from "./assets/data/motherData";
 import fatherData from "./assets/data/fatherData";
 import childData from "./assets/data/childData";
@@ -15,11 +15,11 @@ import { Text, View, Image, ImageBackground, TouchableOpacity, FlatList, SafeAre
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+{/* Home Screen */}
 const HomeScreen = ({ navigation }) => {
   //user input - name
   const [text, setName] = useState('');
-
-
+  //modal pop up on start
   const [modalVisible, setModalVisible] = useState(true);
 
   return (
@@ -94,7 +94,7 @@ const HomeScreen = ({ navigation }) => {
           </TouchableOpacity>
       </View>
       
-      {/* Eye color & Hair Color buttons */}
+      {/* BMI & Nickname buttons */}
       <View style={styles.homeWrapper2}>
           <TouchableOpacity 
             style={[styles.homeButtonWrapper]}
@@ -118,39 +118,39 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
+{/* Help Screen */}
 const Help = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("./assets/bgHome.png")}
       style={styles.backgroundImage}>
 
+      {/* Header */}  
       <View style={styles.helpTitle}>
         <Text style={styles.title}>Help</Text>
       </View>
 
+      {/* Information Text */}
       <View style = {styles.helpWrapper}>
         <Text style = {styles.helpText}>
           MediCal is a pocket BMI and blood type calculator.
             {'\n\n'}
           To use it, simply click on what you want to calculate - blood type or BMI - and enter values into the fields.
         </Text>
+
+        {/* Button */}
         <Pressable
           style={[styles.helpButton, styles.modalButtonClose]}
           onPress={() => navigation.navigate('Home')}>
           <Text style={styles.textStyle}>Back</Text>
         </Pressable>
       </View>
-
-      <View>
-        
-      </View>
-
-      
     </ImageBackground>
     
   );
 };
 
+{/* Blood Type Calculator */}
 const BloodType = ({ navigation }) => {
    //percentage
    var O = 0
@@ -440,6 +440,7 @@ const BloodType = ({ navigation }) => {
   );
 };
 
+{/* Stack Navigator */}
 const Stack = createNativeStackNavigator();
 
 export default function App() {

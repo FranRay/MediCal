@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, Image, ImageBackground, SafeAreaView } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default class App extends React.Component {
+  //state property
   state = {
     height: 0,
     weight: 0,
@@ -11,6 +10,7 @@ export default class App extends React.Component {
     resultText: ""
   };
 
+  //navigate back to previous page (for custom back button)
   constructor(props) {
     super(props);
     this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
@@ -20,26 +20,32 @@ export default class App extends React.Component {
       return true;
   }
 
-  handleCalculate = () => {
-    let imc = (this.state.weight) / (this.state.height) / (this.state.height) * 10000;
+  //function that calculates BMI
+  calculateBMI = () => {
+    let bmi = (this.state.weight) / (this.state.height) / (this.state.height) * 10000;
     this.setState({
-      resultNumber: imc.toFixed(2)
+      resultNumber: bmi.toFixed(2)
     });
 
-    if (imc < 18.5) {
+    if (bmi < 18.5) {
       this.setState({ resultText: "Underweight" });
-    } else if (imc > 18.5 && imc < 25) {
+    } 
+    
+    else if (bmi > 18.5 && bmi < 25) {
       this.setState({ resultText: "Normal Weight" });
-    } else if (imc >= 25 && imc < 30) {
+    } 
+    
+    else if (bmi >= 25 && bmi < 30) {
       this.setState({ resultText: "Overweight" });
-    } else {
+    } 
+    
+    else {
       this.setState({ resultText: "Obesity" });
     }
   };
 
   render() {
     return (
-      
       <ImageBackground
         source={require("../assets/bg.png")}
         style={styles.backgroundImage}>
@@ -95,7 +101,7 @@ export default class App extends React.Component {
         {/* Calculate Button */}
         <TouchableOpacity
             style={styles.calculateButton}
-            onPress={this.handleCalculate}>
+            onPress={this.calculateBMI}>
             <Text style={styles.calculateButtonText}>Calculate</Text>
         </TouchableOpacity>
 
@@ -103,14 +109,17 @@ export default class App extends React.Component {
         <View style={styles.resultsWrapper}>
           <Text style={styles.resultsText}>Your BMI result:</Text>
           <View style={styles.resultsListWrapper}>
+            
             <SafeAreaView style={styles.resultsInfoNum}>
               <View style={styles.resultsNumWrapper}>
                 <Text style={styles.resultsNum}>{this.state.resultNumber}</Text>
               </View>
+
               <View style={styles.resultsInfoWrapper}>
                 <Text style={styles.resultsInfo}>{this.state.resultText}</Text>
               </View>
             </SafeAreaView>
+
           </View>
         </View>
         </ImageBackground>
