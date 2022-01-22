@@ -60,7 +60,7 @@ export default class App extends React.Component {
 
         {/* Height Card */}
         <View style={[styles.parentWrapper, styles.boxShadow]}>
-          <Text style={styles.parentTitle}>Height</Text>
+          <Text style={styles.parentTitle}>Height (cm)</Text>
           <View>
             <SafeAreaView>
                   <TextInput
@@ -77,12 +77,12 @@ export default class App extends React.Component {
 
         {/* Mass Card */}
         <View style={[styles.parentWrapper, styles.boxShadow]}>
-          <Text style={styles.parentTitle}>Mass</Text>
+          <Text style={styles.parentTitle}>Weight (kg)</Text>
           <View>
             <SafeAreaView>
                   <TextInput
                     style = {styles.bmiTextInput}
-                    placeholder = "Enter your mass"
+                    placeholder = "Enter your weight"
                     keyboardType="numeric"
                     onChangeText={weight => {
                       this.setState({ weight });
