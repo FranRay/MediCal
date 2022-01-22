@@ -1,2 +1,2 @@
-# TraitsTool
-An app that predicts an unborn child's traits.
+# MediCal
+A health utility app that calculates your blood type and your BMI.
