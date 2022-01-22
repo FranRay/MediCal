@@ -314,111 +314,19 @@ export default StyleSheet.create({
       fontFamily: 'DMSans-Medium',
   },
 
-    //eye color styles---------------------------------------------------------------
-    eyeButtonWrapper: {
-        marginTop: 7,
-        marginLeft: 51,
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        width: 45,
-        height: 45,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 3,
-        borderColor: colors.secondary,
-    },
+  //bmi calc---------------------------------------------------------------
 
-    eyeButtonText: {
-        fontSize: 12,
-        color: colors.textLight,
-        fontFamily: 'DMSans-Medium',
-    },
-
-    childEyeWrapper: {
-        marginTop: 12,
-        marginBottom: 4,
-        marginLeft: 50,
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        width: 45,
-        height: 45,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 3,
-        borderColor: colors.secondary,
-    },
-
-    childEyeText: {
-      fontSize: 12,
-      marginLeft: -1,
-      color: colors.secondary,
-      fontFamily: 'DMSans-Medium',
-    },
-
-    eyePercentage: {
-        fontSize: 12,
-        fontFamily: 'DMSans-Medium',
-        marginLeft: 51,
-        justifyContent: 'center',
-        alignSelf: 'center',
-        alignContent: 'center',
-    },
-
-    //hair color styles---------------------------------------------------------------
-    hairButtonWrapper: {
-        marginTop: 7,
-        marginLeft: 19,
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        width: 45,
-        height: 45,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 3,
-        borderColor: colors.secondary,
-    },
-
-    hairButtonText: {
-        fontSize: 12,
-        color: colors.textLight,
-        fontFamily: 'DMSans-Medium',
-    },
-
-    childHairWrapper: {
-        marginTop: 12,
-        marginBottom: 4,
-        marginLeft: 19,
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        width: 45,
-        height: 45,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        borderWidth: 3,
-        borderColor: colors.secondary,
-    },
-
-    childHairText: {
-      fontSize: 12,
-      marginLeft: -1,
-      color: colors.secondary,
-      fontFamily: 'DMSans-Medium',
-      alignSelf: 'center',
-    },
-
-    hairPercentage: {
-        fontSize: 12,
-        fontFamily: 'DMSans-Medium',
-        marginLeft: 19,
-        justifyContent: 'center',
-        alignSelf: 'center',
-        alignContent: 'center',
-    },
-
-
-    
+  bmiTextInput: {
+    width: 300,
+    height: 40,
+    fontSize: 14,
+    fontFamily: 'DMSans-Medium',
+    alignSelf: "center",
+    justifyContent: 'center',
+    marginTop: 15,
+    paddingLeft: 20,
+    color: colors.textDark,
+    backgroundColor: colors.tertiary,
+    borderRadius: 10,
+  },
 });
